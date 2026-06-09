@@ -44,6 +44,6 @@ app.post('/upload', upload.single('file'), (req, res) => {
   `);
 });
 
-app.listen(PORT, () => {
-  console.log(`Сервер запущен на http://localhost:${PORT}`);
+app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
+  console.log(`Сервер запущен на порту ${PORT}`);
 });
